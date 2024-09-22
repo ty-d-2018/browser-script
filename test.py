@@ -1,4 +1,5 @@
 import Links
+import Browser
 
 def setup_link_groups(full_file_path):
     json_string = Links.read_json_file(full_file_path)
@@ -23,3 +24,7 @@ def test():
             print(temp.name)
             for key_number in temp.get_key_link_numbers():
                 print(key_number)
+
+def test_browser():
+    browser = Browser.BrowserCommand()
+    browser.get_args()
