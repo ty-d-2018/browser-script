@@ -11,8 +11,15 @@ def setup_link_groups(full_file_path):
 def test():
     list_of_link_groups = setup_link_groups("example.json")
 
-    templates = list_of_link_groups[0].templates
+    #templates = list_of_link_groups[0].templates
 
-    for t_key in templates.keys():
-        temp = templates[t_key]
-        print(temp.name)
+    for group in list_of_link_groups:
+        templates = group.templates
+        for link in group.links:
+            log = "link: " + link.get_full_link()
+            print(log)
+        for t_key in templates.keys():
+            temp = templates[t_key]
+            print(temp.name)
+            for key_number in temp.get_key_link_numbers():
+                print(key_number)
