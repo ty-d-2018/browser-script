@@ -1,8 +1,9 @@
 import test
+import Browser
 
 def run():
-    test.test()
-    test.test_browser()
+    browser = Browser.BrowserCommand("example.json")
+    browser.get_command()
     #print("Hello James!")
 
 run()

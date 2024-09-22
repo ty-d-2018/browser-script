@@ -35,11 +35,11 @@ class LinkGroups:
     def add_template(self, new_template):
         self.templates[new_template.name] = new_template
     def get_template(self, key_name):
-        return self.new_template[key_name]
+        return self.templates[key_name]
     def choose_template_urls(self, key_name):
         template = self.get_template(key_name)
         self.urls = []
-        for key_number in template.get_key_link_numbers:
+        for key_number in template.get_key_link_numbers():
             self.urls.append(self.links[key_number].get_full_link())
         
         return self.urls
