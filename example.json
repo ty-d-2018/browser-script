@@ -1,0 +1,25 @@
+{
+    "groups": {
+        "rust": {
+            "links": ["https://www.rust-lang.org/", "https://www.rust-lang.org/learn", "https://doc.rust-lang.org/std/index.html", "https://chatgpt.com/"],
+            "parameters": {
+                "doc_search": {
+                    "link_number": 2,
+                    "query_string": "?search="
+                }
+            },
+            "sub_templates": {
+                "default": [0, 1, 2],
+                "documentation": [1, 2, 3]
+            }
+        },
+        "three_d": {
+            "links": ["https://godotengine.org/", "https://docs.godotengine.org/en/stable/", "https://docs.blender.org/manual/en/latest/", "https://chatgpt.com/", "https://unity.com/", "https://www.youtube.com"],
+            "sub_templates": {
+                "blender": [2, 3, 5],
+                "godot": [0, 1, 2], 
+                "unity": [4, 3, 5]
+            }
+        }
+    }
+}
